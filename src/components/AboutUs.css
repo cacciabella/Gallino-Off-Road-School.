@@ -1,54 +1,55 @@
-/* Contenitore principale per la sezione About Us */
+
+
 .AboutUs {
-    display: flex; /* Layout a due colonne con flexbox */
-    align-items: center; /* Allinea verticalmente immagine e testo */
-    justify-content: space-between; /* Spazio tra immagine e testo */
-    max-width: 1200px; /* Larghezza massima per schermi grandi */
-    margin: 50px auto; /* Centrato con margine sopra e sotto */
-    padding: 0 20px; /* Padding laterale per schermi piccoli */
-    background-color: transparent; /* Rimuovo lo sfondo grigio */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    max-width: 1200px; 
+    margin: 50px auto; 
+    padding: 0 20px; 
+    background-color: transparent; 
 }
 
 /* Stile per l'immagine */
 .img-thumbnail {
-    flex: 0 0 40%; /* L'immagine occupa il 40% della larghezza */
-    max-width: 600px; /* Larghezza massima dell'immagine */
-    width: 100%; /* Immagine responsive */
-    height: auto; /* Mantiene le proporzioni */
-    border-radius: 8px; /* Angoli arrotondati */
+    flex: 0 0 40%; 
+    max-width: 600px; 
+    width: 100%; 
+    height: auto;
+    border-radius: 8px; 
     position: relative;
     right: 100px;
-    box-shadow: 2px 2px 2px  2px rgb(92, 87, 87); /* Ombra più morbida */
+    box-shadow: 2px 2px 2px  2px rgb(92, 87, 87); 
 }
 
-/* Stile per il contenitore del testo */
+
 .text_AboutUs {
-    flex: 0 0 55%; /* Il testo occupa il 55% della larghezza */
-    font-family: 'Roboto', 'Arial', sans-serif; /* Font moderno */
-    line-height: 1.8; /* Spaziatura tra le righe per leggibilità */
-    color: #222; /* Colore scuro per contrasto */
+    flex: 0 0 55%; 
+    font-family: 'Roboto', 'Arial', sans-serif; 
+    line-height: 1.8; 
+    color: #222; 
     text-align: left;
-    background-color: rgba(255, 255, 255, 0.9); /* Sfondo bianco semi-trasparente */
-    padding: 20px; /* Spaziatura interna */
-    border-radius: 8px; /* Angoli arrotondati */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+    background-color: rgba(237, 230, 230, 0.9); 
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
 }
 
-/* Stile per i sottotitoli */
+
 .text_AboutUs h4 {
-    font-size: 1.5em; /* Dimensione più grande per i titoli */
-    color: black; /* Rosso per attirare l'attenzione */
+    font-size: 1.5em; 
+    color: black; 
     margin-bottom: 10px;
-    font-weight: 700; /* Grassetto per i titoli */
+    font-weight: 700; 
 }
 
-/* Stile per il testo normale */
+
 .text_AboutUs p {
-    font-size: 1em; /* Dimensione leggibile */
-    margin-bottom: 15px; /* Spaziatura tra paragrafi */
+    font-size: 1em; 
+    margin-bottom: 15px; 
 }
 
-/* Responsività per schermi più piccoli */
+
 @media (max-width: 768px) {
     .AboutUs {
         flex-direction: column; /* Impila immagine e testo in verticale */
