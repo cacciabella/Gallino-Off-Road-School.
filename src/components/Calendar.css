@@ -1,0 +1,368 @@
+/* Stili di base */
+.w-full {
+    width: 100%;
+  }
+  
+  .max-w-md {
+    max-width: 75rem;
+  }
+  
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .bg-white {
+    background-color: white;
+  }
+  
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  
+  .shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  
+  /* Header del calendario */
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .bg-gray-100 {
+    background-color: #f3f4f6;
+  }
+  
+  .p-3 {
+    padding: 0.75rem;
+  }
+  
+  .border-b {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #e5e7eb;
+  }
+  
+  .mr-2 {
+    margin-right: 0.5rem;
+  }
+  
+  .text-blue-600 {
+    color: #2563eb;
+  }
+  
+  .text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  /* Contenitore delle voci */
+  .max-h-\[400px\] {
+    max-height: 400px;
+  }
+  
+  .overflow-y-auto {
+    overflow-y: auto;
+  }
+  
+  /* Linea verticale della timeline */
+  .relative {
+    position: relative;
+  }
+  
+  .border-l-2 {
+    border-left-width: 2px;
+    border-left-style: solid;
+  }
+  
+  .border-blue-300 {
+    border-left-color: #93c5fd;
+  }
+  
+  .ml-4 {
+    margin-left: 1rem;
+  }
+  
+  .py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Voce singola della timeline */
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .pl-4 {
+    padding-left: 1rem;
+  }
+  
+  .border-b {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #e5e7eb;
+  }
+  
+  .pb-2 {
+    padding-bottom: 0.5rem;
+  }
+  
+  .last\:border-b-0:last-child {
+    border-bottom-width: 0px;
+  }
+  
+  /* Pallino sulla timeline */
+  .absolute {
+    position: absolute;
+  }
+  
+  .-left-\[10px\] {
+    left: -10px;
+  }
+  
+  .top-2 {
+    top: 0.5rem;
+  }
+  
+  .w-3 {
+    width: 0.75rem;
+  }
+  
+  .h-3 {
+    height: 0.75rem;
+  }
+  
+  .bg-blue-500 {
+    background-color: #3b82f6;
+  }
+  
+  .rounded-full {
+    border-radius: 9999px;
+  }
+  
+  /* Informazioni sulla data */
+  .text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+  .font-medium {
+    font-weight: 500;
+  }
+  
+  .text-gray-700 {
+    color: #374151;
+  }
+  
+  .text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+  
+  .text-gray-500 {
+    color: #6b7280;
+  }
+  
+  /* Informazioni sul trattamento */
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  .text-blue-700 {
+    color: #1d4ed8;
+  }
+  
+  .text-gray-600 {
+    color: #4b5563;
+  }
+  
+  /* Footer con paginazione */
+  .justify-between {
+    justify-content: space-between;
+  }
+  
+  .border-t {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #e5e7eb;
+  }
+  
+  .p-2 {
+    padding: 0.5rem;
+  }
+  
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  
+  .hover\:bg-gray-200:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .disabled\:opacity-50:disabled {
+    opacity: 0.5;
+  }
+
+  .info-button {
+    color: #3b82f6; /* equivalente a text-blue-500 */
+    border: none;
+  position: absolute;
+  top:20px;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .info-botton2{
+    color: #3b82f6; /* equivalente a text-blue-500 */
+    border: none;
+  position: absolute;
+ left: 320px;
+
+    background: transparent;
+    cursor: pointer;
+  }
+  .info-button:hover {
+    color: #1d4ed8; /* equivalente a hover:text-blue-700 */
+  }
+  
+  .info-button:focus {
+    outline: none; /* equivalente a focus:outline-none */
+  }
+  
+  /* Tooltip stile nuvoletta */
+  .tooltip {
+    position: absolute;
+    left: 1rem; /* equivalente a left-4 */
+    top: 3rem; /* equivalente a top-12 */
+    z-index: 10;
+    width: 16rem; /* equivalente a w-64 */
+    padding: 0.75rem; /* equivalente a p-3 */
+    background-color: white;
+    border-radius: 0.5rem; /* equivalente a rounded-lg */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* equivalente a shadow-lg */
+    border: 1px solid #e5e7eb; /* equivalente a border border-gray-200 */
+  }
+  .container {
+    padding: 16px;
+    background-color: #ebf8ff; /* bg-blue-50 */
+    border-bottom: 1px solid #bee3f8; /* border-blue-100 */
+  }
+  
+  .title {
+    font-weight: 600; /* font-semibold */
+    color: #2c5282; /* text-blue-800 */
+    margin-bottom: 4px; /* mb-1 */
+  }
+  
+  .text {
+    font-size: 14px; /* text-sm */
+    color: #4a5568; /* text-gray-700 */
+  }
+  
+  .tooltip-text {
+    font-size: 0.75rem; /* equivalente a text-xs */
+    color: #374151; /* equivalente a text-gray-700 */
+  }
+  
+  /* Freccia del tooltip */
+  .tooltip-arrow {
+    position: absolute;
+    top: -8px; /* equivalente a -top-2 */
+    left: 0.5rem; /* equivalente a left-2 */
+    transform: rotate(45deg);
+    width: 0.75rem; /* equivalente a w-3 */
+    height: 0.75rem; /* equivalente a h-3 */
+    background-color: white;
+    border-top: 1px solid #e5e7eb; /* equivalente a border-t border-gray-200 */
+    border-left: 1px solid #e5e7eb; /* equivalente a border-l border-gray-200 */
+  }
+  
+  .staff-info {
+    color: #4b5563; /* equivalente a text-gray-600 */
+  }
+  .action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3b82f6; /* bg-blue-500 */
+    color: white; /* text-white */
+    border-radius: 0.375rem; /* rounded */
+    padding-left: 0.75rem; /* px-3 */
+    padding-right: 0.75rem; /* px-3 */
+    padding-top: 0.25rem; /* py-1 */
+    padding-bottom: 0.25rem; /* py-1 */
+    font-size: 0.975rem; /* text-sm */
+    white-space: nowrap; /* whitespace-nowrap */
+    margin-left: auto; /* ml-auto */
+    transition: background-color 0.3s ease-in-out; /* transition-colors */
+    width: 100px;
+    height: 50px;
+    /* Aggiungi i margini per spostare il bottone */
+    position: relative; /* Posizione relativa al suo contenitore */
+    top: -5vh;
+    margin-left: 70vw; /* Usa vw per larghezza relativa */
+  }
+  
+  .action-button:hover {
+    background-color: #2563eb; /* hover:bg-blue-600 */
+  }
+  
+  /* Media Query per schermi più piccoli */
+  @media (max-width: 768px) {
+    .action-button {
+        margin-left: 65vw; /* Aumenta il margine sinistro su schermi piccoli */
+    }
+  }
+  
+  /* Media Query per schermi molto piccoli (come smartphone in portrait) */
+  @media (max-width: 480px) {
+    .action-button {
+        margin-left: 65vw;
+    }
+  }
+  
+  
+  .action-button:hover {
+    background-color: #2563eb; /* hover:bg-blue-600 */
+  }
+  
+  
+  /* Media query per responsività */
+  @media (max-width: 640px) {
+    .max-w-md {
+      max-width: 100%;
+    }
+    
+    .mx-auto {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+    
+    .text-lg {
+      font-size: 1rem;
+    }
+
+    .info-botton2{
+        color: #3b82f6; /* equivalente a text-blue-500 */
+        border: none;
+      position: absolute;
+     left: 190px;
+    
+        background: transparent;
+        cursor: pointer;
+      }
+
+     
+  }

@@ -1,0 +1,71 @@
+/* Contenitore principale per la sezione About Us */
+.AboutUs {
+    display: flex; /* Layout a due colonne con flexbox */
+    align-items: center; /* Allinea verticalmente immagine e testo */
+    justify-content: space-between; /* Spazio tra immagine e testo */
+    max-width: 1200px; /* Larghezza massima per schermi grandi */
+    margin: 50px auto; /* Centrato con margine sopra e sotto */
+    padding: 0 20px; /* Padding laterale per schermi piccoli */
+    background-color: transparent; /* Rimuovo lo sfondo grigio */
+}
+
+/* Stile per l'immagine */
+.img-thumbnail {
+    flex: 0 0 40%; /* L'immagine occupa il 40% della larghezza */
+    max-width: 600px; /* Larghezza massima dell'immagine */
+    width: 100%; /* Immagine responsive */
+    height: auto; /* Mantiene le proporzioni */
+    border-radius: 8px; /* Angoli arrotondati */
+    position: relative;
+    right: 100px;
+    box-shadow: 2px 2px 2px  2px rgb(92, 87, 87); /* Ombra più morbida */
+}
+
+/* Stile per il contenitore del testo */
+.text_AboutUs {
+    flex: 0 0 55%; /* Il testo occupa il 55% della larghezza */
+    font-family: 'Roboto', 'Arial', sans-serif; /* Font moderno */
+    line-height: 1.8; /* Spaziatura tra le righe per leggibilità */
+    color: #222; /* Colore scuro per contrasto */
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.9); /* Sfondo bianco semi-trasparente */
+    padding: 20px; /* Spaziatura interna */
+    border-radius: 8px; /* Angoli arrotondati */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+}
+
+/* Stile per i sottotitoli */
+.text_AboutUs h4 {
+    font-size: 1.5em; /* Dimensione più grande per i titoli */
+    color: black; /* Rosso per attirare l'attenzione */
+    margin-bottom: 10px;
+    font-weight: 700; /* Grassetto per i titoli */
+}
+
+/* Stile per il testo normale */
+.text_AboutUs p {
+    font-size: 1em; /* Dimensione leggibile */
+    margin-bottom: 15px; /* Spaziatura tra paragrafi */
+}
+
+/* Responsività per schermi più piccoli */
+@media (max-width: 768px) {
+    .AboutUs {
+        flex-direction: column; /* Impila immagine e testo in verticale */
+        align-items: center;
+    }
+
+    .img-thumbnail {
+        position:relative;
+        left:5px;
+
+        flex: 0 0 100%; /* L'immagine occupa tutta la larghezza */
+        max-width: 300px; /* Ridimensiona l'immagine per schermi piccoli */
+        margin-bottom: 20px; /* Spazio sotto l'immagine */
+    }
+
+    .text_AboutUs {
+        flex: 0 0 90%; /* Il testo occupa quasi tutta la larghezza */
+        padding: 15px;
+    }
+}
