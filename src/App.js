@@ -3,6 +3,7 @@ import Header from './components/header';
 import AboutUs from './components/AboutUs';
 import CalendarEvent from './components/Calendar_Event';
 import AboutMe from './components/AboutMe';
+import Footer from './components/footer';
 
 function App() {
   const myRef = useRef(null);
@@ -32,6 +33,7 @@ function App() {
       <AboutUs ref={myRef} />
       <CalendarEvent />
       <AboutMe />
+      <Footer/>
 
     </div>
   );
