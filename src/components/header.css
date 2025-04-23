@@ -16,8 +16,20 @@
   color: #fff;
   padding: 1rem;
   top: 350px;
+  animation: fadeIn 0.5s ease-in-out both; 
+  animation-delay: 0.3s;
 }
 
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }}
 .hero-content h1 {
   margin-bottom: 1rem;
   font-size: 2.5rem;
@@ -51,6 +63,8 @@
   width: 100%;
   z-index: 100;
   background-color: rgba(107, 105, 105, 0.5);
+  animation: fadeIn 0.5s ease-in-out both; 
+  animation-delay: 0.3s;
 }
 
 /* Navbar with logo and toggle button */
@@ -78,6 +92,7 @@
   position: relative;
   padding-top: 60px;
   overflow-x: hidden;
+  
 }
 
 .navbar-toggler {
