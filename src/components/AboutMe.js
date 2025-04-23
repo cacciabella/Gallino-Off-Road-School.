@@ -12,7 +12,7 @@ const ModalImage = ({ imageUrl, onClose }) => {
     </div>
   );
 };
-const AboutUs = React.forwardRef((props, ref) => {
+const AboutMe = React.forwardRef((props, ref) => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(null);
@@ -59,4 +59,4 @@ const AboutUs = React.forwardRef((props, ref) => {
   );
 });
 
-export default AboutUs;
+export default AboutMe;

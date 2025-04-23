@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import Header from './components/header';
 import AboutUs from './components/AboutUs';
 import CalendarEvent from './components/Calendar_Event';
+import AboutMe from './components/AboutMe';
 
 function App() {
   const myRef = useRef(null);
@@ -30,6 +31,8 @@ function App() {
       scrollToCalendar={() => scrollToSection(calendarRef)} />
       <AboutUs ref={myRef} />
       <CalendarEvent />
+      <AboutMe />
+
     </div>
   );
 }
