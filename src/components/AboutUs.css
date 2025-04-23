@@ -70,3 +70,64 @@
         padding: 15px;
     }
 }
+
+
+
+/* AboutUs.css */
+
+/* Modale: overlay */
+/* Modale su desktop */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Sfondo scuro */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Allineato verso l'alto */
+    z-index: 1000; /* Assicurati che la modale stia sopra gli altri contenuti */
+    padding-top: 20px; /* Distanza dal bordo superiore della finestra */
+}
+
+/* Contenuto della modale */
+.modal-content {
+    position: relative;
+    max-width: 80%; /* Limita la larghezza della modale */
+    max-height: 80%; /* Limita l'altezza della modale */
+    padding: 20px;
+    margin-top: 20px; /* Distanza dal top */
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Se si clicca sulla modale, si chiude */
+.modal-content:hover {
+    cursor: pointer;
+}
+
+/* Modifiche per dispositivi mobili */
+@media (max-width: 768px) {
+    .modal {
+        padding-top: 10px; /* Riduci la distanza superiore sui dispositivi mobili */
+    }
+
+    .modal-content {
+        max-width: 90%; /* Aumenta la larghezza della modale sui dispositivi mobili */
+        max-height: 90%; /* Limita l'altezza a 90% */
+        margin-top: 10px; /* Riduci lo spazio tra il contenuto e la parte superiore della modale */
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        max-width: 95%; /* Ancora più largo sui dispositivi mobili molto piccoli */
+        max-height: 95%; /* Anche l'altezza può essere più ampia */
+    }
+}

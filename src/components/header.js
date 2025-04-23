@@ -2,16 +2,17 @@ import React, { useState } from 'react';
 import './header.css';
 import fotoHeader from '../img/foto_header.jpg';
 import logoSito from '../img/logo_sito.png';
+import { Link } from 'react-scroll';
 
 function Hero({ scrollToComponent }) {
   const [showNav, setShowNav] = useState(false);
   
   const menuItems = [
-    { name: 'Home', path: '/Calendar_Event' },
+    { name: 'Home', path: 'AboutUs' },
     { name: 'Chi Sono', path: '/corsi' },
-    { name: 'Chi Siamo', path: '/chi-siamo' },
+    { name: 'Chi Siamo', path: '/AboutUs' },
     { name: 'Contatti', path: '/contatti' },
-    { name: 'Eventi', path: '/eventi' }
+    { name: 'Eventi', path: '/Calendar_Event' }
   ];
   
   return (
@@ -35,9 +36,10 @@ function Hero({ scrollToComponent }) {
           <ul className="navbar-nav">
             {menuItems.map((item, index) => (
               <li key={index} className="navbar-item">
-                <a href={item.path} className="navbar-link" onClick={() => setShowNav(false)}>
+                <Link to={item.path} className="navbar-link" onClick={() => setShowNav(false)}
+                smooth={true}    duration={500}>
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

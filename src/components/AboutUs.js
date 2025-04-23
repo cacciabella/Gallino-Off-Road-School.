@@ -1,11 +1,38 @@
-import React from "react";
+import React,{useState} from "react";
 import '../components/AboutUs.css';
 import ImageAboutUs from '../img/photo_presentazione.jpg';
+const ModalImage = ({ imageUrl, onClose }) => {
+  if (!imageUrl) return null;
 
-const AboutUs = React.forwardRef((props, ref) => {
   return (
-    <div className="AboutUs" ref={ref}>
-      <img src={ImageAboutUs} className="img-thumbnail" alt="Gruppo di motociclisti della Gallino Off-Road School" />
+    <div className="modal" onClick={onClose}>
+      <div className="modal-content">
+        <img src={imageUrl} alt="Enlarged view" />
+      </div>
+    </div>
+  );
+};
+const AboutUs = React.forwardRef((props, ref) => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(null);
+
+  const openModal = () => {
+    setCurrentImage(ImageAboutUs);  // Usa l'immagine come URL per la modale
+    setIsModalOpen(true);
+  };
+
+  // Funzione per chiudere la modale
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setCurrentImage(null);
+  };
+
+
+
+  return (
+    <div className="AboutUs"  id="AboutUs" ref={ref}>
+      <img src={ImageAboutUs} className="img-thumbnail" alt="Gruppo di motociclisti della Gallino Off-Road School" onClick={openModal} />
       <div className="text_AboutUs">
         <h4>Ritorna la Gallino Off-Road School di Giuseppe Gallino!</h4>
         <p>Dopo anni di collaborazioni con gruppi sportivi, in cui Giuseppe Gallino ha condiviso la sua esperienza per formare nuovi enduristi, nasce finalmente la <strong>Gallino Off-Road School</strong>.</p>
@@ -16,6 +43,7 @@ const AboutUs = React.forwardRef((props, ref) => {
         <h4>Impara con la Gallino Off-Road School</h4>
         <p>La Gallino Off-Road School offre corsi per tutti i livelli: dai neofiti a chi vuole migliorare la propria tecnica. È una scuola “vecchia maniera”, dove contano la pratica, le ore passate in moto e i consigli diretti. Niente analisi di video interminabili: qui la differenza la fanno la costanza, l’impegno e l’esperienza sul campo.</p>
       </div>
+      {isModalOpen && <ModalImage imageUrl={currentImage} onClose={closeModal} />}
     </div>
   );
 });

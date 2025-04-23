@@ -5,6 +5,16 @@ import CalendarEvent from './components/Calendar_Event';
 
 function App() {
   const myRef = useRef(null);
+  const homeRef = useRef(null);
+  const aboutUsRef = useRef(null);
+  const calendarRef = useRef(null);
+  
+  // Create a scroll function that can handle any component
+  const scrollToSection = (sectionRef) => {
+    if (sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const scrollToComponent = () => {
     if (myRef.current) {
@@ -14,7 +24,10 @@ function App() {
 
   return (
     <div className="App">
-      <Header scrollToComponent={scrollToComponent} />
+      <Header scrollToComponent={scrollToComponent}
+      scrollToHome={() => scrollToSection(homeRef)}
+      scrollToAboutUs={() => scrollToSection(aboutUsRef)}
+      scrollToCalendar={() => scrollToSection(calendarRef)} />
       <AboutUs ref={myRef} />
       <CalendarEvent />
     </div>
