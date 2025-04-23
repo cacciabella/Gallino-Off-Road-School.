@@ -1,67 +1,74 @@
 /* src/Hero.css */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+.hero-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
 
-  
-  .hero-mask {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-  
-  .hero-content {
-    position: relative;
-    color: #fff;
-    padding: 1rem;
-    top: 350px;
-  }
-  
-  .hero-content h1 {
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
-  }
-  
-  .hero-content h4 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-  
-  .hero-btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 1.25rem;
-    background: transparent;
-    border: 2px solid #fff;
-    border-radius: 15px;
-    color: #fff;
-    cursor: pointer;
-
-    transition: background-color 0.3s;
-  }
-  
-  .hero-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-
-
-/* Navbar fixed in cima */
-.navbar {
-  background-color:  rgba(107, 105, 105, 0.5); /* Sfondo semi-trasparente */
-  color: white;
+.hero-content {
+  position: relative;
+  color: #fff;
   padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  top: 350px;
+}
+
+.hero-content h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.hero-content h4 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.hero-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Navbar container fixed at top */
+.navbar-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100; /* Assicurati che la navbar sia sopra l'hero */
+  z-index: 100;
+  background-color: rgba(107, 105, 105, 0.5);
+}
+
+/* Navbar with logo and toggle button */
+.navbar {
+  color: white;
+  padding: 1rem;
+  width: 100%;
+}
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .hero {
-  height: 100vh; /* Altezza dell'header */
+  height: 100vh;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -69,27 +76,18 @@
   align-items: center;
   text-align: center;
   position: relative;
-  padding-top: 60px; /* Aggiungi spazio per la navbar */
-}
-
-
-
-.logo {
-  
-  font-weight: 10;
+  padding-top: 60px;
+  overflow-x: hidden;
 }
 
 .navbar-toggler {
   background: none;
   border: none;
+  margin-right: 30px;
   font-size: 30px;
   color: #fff;
   cursor: pointer;
-  position: relative;
-  right: 20px;
 }
-
-
 
 .navbar-toggler:focus {
   outline: none;
@@ -97,25 +95,18 @@
 
 /* Menu a discesa */
 .menu-dropdown {
-  position: absolute;
-  left: 0;
   width: 100%;
-  background-color:  rgba(107, 105, 105, 0.5);
+  background-color: transparent;
   color: white;
-  z-index: 10;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
   max-height: 0;
-bottom: 477px;
-border-bottom-left-radius: 5px;
-border-bottom-right-radius: 5px;
   opacity: 0;
 }
 
 .menu-dropdown.open {
   max-height: 300px;
   opacity: 1;
-  
 }
 
 .navbar-nav {
@@ -124,7 +115,7 @@ border-bottom-right-radius: 5px;
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
 }
 
 .navbar-item {
@@ -145,113 +136,82 @@ border-bottom-right-radius: 5px;
   color: #ff7f50;
 }
 
-
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .hero {
-      height: 900px;
-    }
-
-    .menu-dropdown {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      background-color:  rgba(107, 105, 105, 0.5);
-      color: white;
-      z-index: 10;
-      transition: all 0.3s ease-in-out;
-      overflow: hidden;
-      max-height: 0;
-    bottom: 579px;
-      opacity: 0;
-    }
-  
-    .hero-content h1 {
-      font-size: 2rem;
-      position: relative;
-      color: #fff;
-      padding: 1rem;
-      top: 40px;
-    }
-    .navbar-toggler {
-      background: none;
-      border: none;
-      font-size: 30px;
-      color: #fff;
-      cursor: pointer;
-      position: relative;
-      right: 40px;
-    }
-    
-    .hero-content h4 {
-      font-size: 1.25rem;
-    }
-  
-
-    .navbar {
-     width: 100%;
-
-    }
-    .hero-btn {
-      position: relative;
-      top: 30px;
-      padding: 0.75rem 1.5rem;
-      font-size: 0.80rem;
-      background: transparent;
-      border: 2px solid #fff;
-      color: #fff;
-      border-radius: 15px;
-      cursor: pointer;
-  
-      transition: background-color 0.3s;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .hero {
-      height: 900px;
-    }
-  
-    .hero-content h1 {
-      font-size: 1.5rem;
-    }
-  
-    .hero-content h4 {
-      font-size: 1rem;
-    }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    height: 900px;
   }
 
-  .scroll-down {
-    position: absolute;
-    bottom: 150px;
-    left: 50%;
-    transform: translateX(-50%);
+  .hero-content h1 {
+    font-size: 2rem;
+    position: relative;
+    color: #fff;
+    padding: 1rem;
+    top: 40px;
+  }
+  
+  .hero-content h4 {
+    font-size: 1.25rem;
+  }
+  
+  .hero-btn {
+    position: relative;
+    top: 30px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.80rem;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 15px;
     cursor: pointer;
-    z-index: 10;
+    transition: background-color 0.3s;
   }
-  
-  .scroll-down span {
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-bottom: 3px solid white;
-    border-right: 3px solid white;
-    transform: rotate(45deg);
-    margin: -10px;
-    animation: scroll-down 2s infinite;
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 900px;
   }
-  
-  @keyframes scroll-down {
-    0% {
-      opacity: 0;
-      transform: rotate(45deg) translate(-20px, -20px);
-    }
-    50% {
-      opacity: 2;
-    }
-    100% {
-      opacity: 0;
-      transform: rotate(45deg) translate(20px, 20px);
-    }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
   }
+
+  .hero-content h4 {
+    font-size: 1rem;
+  }
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.scroll-down span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: scroll-down 2s infinite;
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 2;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
