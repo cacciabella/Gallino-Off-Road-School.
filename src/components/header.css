@@ -2,6 +2,11 @@
 *, *:before, *:after {
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 .hero-mask {
   position: absolute;
   top: 0;

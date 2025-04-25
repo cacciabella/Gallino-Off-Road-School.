@@ -8,11 +8,11 @@ const Hero = React.forwardRef(({ scrollToComponent }, ref) => {
   const [showNav, setShowNav] = useState(false);
   
   const menuItems = [
-    { name: 'Home', path: 'home' },
-    { name: 'Chi Siamo', path: 'AboutUs' },
-    { name: 'Chi Sono', path: 'AboutMe' },
-    { name: 'Eventi', path: 'calendarEvent'},
-    { name: 'Contatti', path: 'contatti' }
+    { name: 'Home', path: '#home' },
+    { name: 'Chi Siamo', path: '#AboutUs' },
+    { name: 'Chi Sono', path: '#AboutMe' },
+    { name: 'Eventi', path: '#calendarEvent'},
+    { name: 'Contatti', path: '#contatti' }
    
   ];
   
@@ -37,10 +37,10 @@ const Hero = React.forwardRef(({ scrollToComponent }, ref) => {
           <ul className="navbar-nav">
             {menuItems.map((item, index) => (
               <li key={index} className="navbar-item">
-                <Link to={item.path} className="navbar-link" onClick={() => setShowNav(false)}
-                smooth={true}    duration={500}>
+                <a href={item.path} className="navbar-link" onClick={() => setShowNav(false)}
+                   duration={500}>
                   {item.name}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
