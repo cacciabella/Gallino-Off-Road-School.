@@ -1,117 +1,119 @@
-
-
-import React, { useState } from "react";
-import { ChevronLeft, ChevronRight, CalendarDays,Info} from 'lucide-react';
-
-
+import { useState } from 'react';
+import { Calendar, ChevronRight, ChevronLeft, Info, MapPin, Users, Clock } from 'lucide-react';
 import '../components/Calendar.css';
 
-export default function CalendarEvent() {
+export default function CalendarioCorsi() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [activeTooltip, setActiveTooltip] = useState(null);
+  const [expandedCourse, setExpandedCourse] = useState(null);
   const [showInfo, setShowInfo] = useState(false);
   const itemsPerPage = 5;
-  
-  // Date specifiche e alternanza corsi base/avanzato
+
   const courses = [
     {
+      id: 1,
       date: "17 Maggio '24",
-      time: '09:00 - 18:00',
-      type: 'Corso Base',
-      instructor: 'Giuseppe Gallino',
-      address: 'Masserano (BI)',
-      Person:'Max 6 Persone',
-      info: 'per chi vuole partire da zero nella guida in fuoristrada con esercizi tecnici mirati.'
+      time: "09:00 - 18:00",
+      type: "Corso Base",
+      instructor: "Giuseppe Gallino",
+      location: "Masserano (BI)",
+      people: "Max 6 Persone",
+      info: "per chi vuole partire da zero nella guida in fuoristrada con esercizi tecnici mirati."
     },
     {
+      id: 2,
       date: "18 Maggio '24",
-      time: '09:00 - 18:00',
-      type: 'Corso Avanzato',
-      instructor: 'Giuseppe Gallino',
-      address: 'Masserano (BI)',
-      Person:'Max 6 Persone',
-      info: 'per chi ha già una minima esperienza di guida in fuoristrada e voglia perfezionare la tecnica.'
-      
+      time: "09:00 - 18:00",
+      type: "Corso Avanzato",
+      instructor: "Giuseppe Gallino",
+      location: "Masserano (BI)",
+      people: "Max 6 Persone",
+      info: "per chi ha già una minima esperienza di guida in fuoristrada e voglia perfezionare la tecnica."
     },
     {
+      id: 3,
       date: "24 Maggio '24",
-      time: '09:00 - 18:00',
-      type: 'Corso Base',
-      instructor: 'Giuseppe Gallino',
-      address: 'Masserano (BI)',
-      Person:'Max 6 Persone',
-      info: 'per chi vuole partire da zero nella guida in fuoristrada con esercizi tecnici mirati.'
+      time: "09:00 - 18:00",
+      type: "Corso Base",
+      instructor: "Giuseppe Gallino",
+      location: "Masserano (BI)",
+      people: "Max 6 Persone",
+      info: "per chi vuole partire da zero nella guida in fuoristrada con esercizi tecnici mirati."
     },
     {
+      id: 4,
       date: "25 Maggio '24",
-      time: '09:00 - 18:00',
-      type: 'Corso Avanzato',
-      instructor: 'Giuseppe Gallino',
-      address: 'Masserano (BI)',
-      Person:'Max 6 Persone',
-      info: 'per chi ha già una minima esperienza di guida in fuoristrada e voglia perfezionare la tecnica.'
+      time: "09:00 - 18:00",
+      type: "Corso Avanzato",
+      instructor: "Giuseppe Gallino",
+      location: "Masserano (BI)",
+      people: "Max 6 Persone",
+      info: "per chi ha già una minima esperienza di guida in fuoristrada e voglia perfezionare la tecnica."
     },
     {
+      id: 5,
       date: "14 Giugno '24",
-      time: '09:00 - 18:00',
-      type: 'Corso Base',
-      instructor: 'Giuseppe Gallino',
-      address: 'Masserano (BI)',
-      Person:'Max 6 Persone',
-      info: 'per chi vuole partire da zero nella guida in fuoristrada con esercizi tecnici mirati.',
-      
+      time: "09:00 - 18:00",
+      type: "Corso Base",
+      instructor: "Giuseppe Gallino",
+      location: "Masserano (BI)",
+      people: "Max 6 Persone",
+      info: "per chi vuole partire da zero nella guida in fuoristrada con esercizi tecnici mirati."
     },
-    // Aggiungi altre date se necessario per raggiungere 10 corsi totali
     {
+      id: 6,
       date: "15 Giugno '24",
-      time: '09:00 - 18:00',
-      type: 'Corso Avanzato',
-      instructor: 'Giuseppe Gallino',
-      address: 'Masserano (BI)',
-      Person:'Max 6 Persone',
-      info: 'per chi ha già una minima esperienza di guida in fuoristrada e voglia perfezionare la tecnica.'
+      time: "09:00 - 18:00",
+      type: "Corso Avanzato",
+      instructor: "Giuseppe Gallino",
+      location: "Masserano (BI)",
+      people: "Max 6 Persone",
+      info: "per chi ha già una minima esperienza di guida in fuoristrada e voglia perfezionare la tecnica."
     },
     {
+      id: 7,
       date: "12 Luglio '24",
-      time: '09:00 - 18:00',
-      type: 'Corso Base',
-      instructor: 'Giuseppe Gallino',
-      address: 'Masserano (BI)',
-      Person:'Max 6 Persone',
-      info: 'per chi vuole partire da zero nella guida in fuoristrada con esercizi tecnici mirati.'
+      time: "09:00 - 18:00",
+      type: "Corso Base",
+      instructor: "Giuseppe Gallino",
+      location: "Masserano (BI)",
+      people: "Max 6 Persone",
+      info: "per chi vuole partire da zero nella guida in fuoristrada con esercizi tecnici mirati."
     },
     {
+      id: 8,
       date: "13 Luglio '24",
-      time: '09:00 - 18:00',
-      type: 'Corso Avanzato',
-      instructor: 'Giuseppe Gallino',
-      address: 'Masserano (BI)',
-      Person:'Max 6 Persone',
-      info: 'per chi ha già una minima esperienza di guida in fuoristrada e voglia perfezionare la tecnica.'
+      time: "09:00 - 18:00",
+      type: "Corso Avanzato",
+      instructor: "Giuseppe Gallino",
+      location: "Masserano (BI)",
+      people: "Max 6 Persone",
+      info: "per chi ha già una minima esperienza di guida in fuoristrada e voglia perfezionare la tecnica."
     },
     {
+      id: 9,
       date: "19 Luglio '24",
-      time: '09:00 - 18:00',
-      type: 'Corso Base',
-      instructor: 'Giuseppe Gallino',
-      address: 'Masserano (BI)',
-      Person:'Max 6 Persone',
-      info: 'per chi vuole partire da zero nella guida in fuoristrada con esercizi tecnici mirati.'
+      time: "09:00 - 18:00",
+      type: "Corso Base",
+      instructor: "Giuseppe Gallino",
+      location: "Masserano (BI)",
+      people: "Max 6 Persone",
+      info: "per chi vuole partire da zero nella guida in fuoristrada con esercizi tecnici mirati."
     },
     {
-        date: "20 Luglio '24",
-        time: '09:00 - 18:00',
-        type: 'Corso Avanzato',
-        instructor: 'Giuseppe Gallino',
-      address: 'Masserano (BI)',
-      Person:'Max 6 Persone',
-      info: 'per chi ha già una minima esperienza di guida in fuoristrada e voglia perfezionare la tecnica.'
-      }
+      id: 10,
+      date: "20 Luglio '24",
+      time: "09:00 - 18:00",
+      type: "Corso Avanzato",
+      instructor: "Giuseppe Gallino",
+      location: "Masserano (BI)",
+      people: "Max 6 Persone",
+      info: "per chi ha già una minima esperienza di guida in fuoristrada e voglia perfezionare la tecnica."
+    }
   ];
-
+  
   // Calcola il numero totale di pagine
   const totalPages = Math.ceil(courses.length / itemsPerPage);
-
+  
   // Ottieni i corsi per la pagina corrente
   const getCurrentPageCourses = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -125,131 +127,131 @@ export default function CalendarEvent() {
   const handlePrevPage = () => {
     setCurrentPage(prev => Math.max(prev - 1, 1));
   };
-
-  const toggleTooltip = (index) => {
-    setActiveTooltip(activeTooltip === index ? null : index);
-  };
-
-  const toggleInfo = () => {
-    setShowInfo(prev => !prev);
-  };
-
   
-//provvisorio link a messagger (inserimento con Api in corso..)
-  const handleEventAction = (index) => {
-     window.open("https://www.messenger.com/t/100002404468546", "_blank");
-   
-    
+  const toggleExpand = (id) => {
+    if (expandedCourse === id) {
+      setExpandedCourse(null);
+    } else {
+      setExpandedCourse(id);
+    }
+  };
+  
+  const toggleInfo = () => {
+    setShowInfo(!showInfo);
+  };
+  
+  const handleEventAction = () => {
+    window.open("https://www.messenger.com/t/100002404468546", "_blank");
   };
 
-
-  const openMessenger = () => {
-   
-  };
   return (
-    <div className="w-full max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden">
-      <div className="flex items-center bg-gray-100 p-3 border-b">
-        <CalendarDays className="mr-2 text-blue-600" />
-       
-        <h2 className="text-lg font-semibold">Calendario Corsi</h2>
-        <button 
+    <div className="calendar-container">
+      <div className="calendar-header">
+        <div className="header-title">
+          <Calendar className="calendar-icon" size={20} />
+          <h2>Calendario Corsi</h2>
+        </div>
+        <Info 
+          className="info-icon" 
+          size={18}
           onClick={toggleInfo}
-          className="info-botton2"
-          aria-label="Informazioni"
-        >
-          <Info size={20} />
-        </button>
+        />
       </div>
       
       {showInfo && (
-        <div className="container">
-          <h3 className="title">Importante</h3>
-          <p className="text">
-          è richiesta la tessera AICS MOTOALLENA FUORISTADA che può essere richiesta anche al momento dell'iscrizione
+        <div className="info-banner">
+          <h3>Importante</h3>
+          <p>
+            È richiesta la tessera AICS MOTOALLENA FUORISTADA che può essere richiesta anche al momento dell'iscrizione
           </p>
         </div>
       )}
       
-      <div className="max-h-[400px] overflow-y-auto">
-        <div className="relative border-l-2 border-blue-300 ml-4 py-2">
-          {getCurrentPageCourses().map((course, index) => (
-            <div 
-              key={index} 
-              className="mb-2 pl-4 relative border-b pb-2 last:border-b-0"
-            >
-              <div className="absolute -left-[10px] top-2 w-3 h-3 bg-blue-500 rounded-full"></div>
-              <div className="text-sm">
-                <span className="font-medium text-gray-700 mr-2">{course.date}</span>
-                <span className="text-xs text-gray-500">{course.time}</span>
+      <div className="courses-container">
+        <div className="courses-list">
+          {getCurrentPageCourses().map(course => (
+            <div key={course.id} className="course-item">
+              <div 
+                className="course-header"
+                onClick={() => toggleExpand(course.id)}
+              >
+                <div className="course-main-info">
+                  <div className="course-dot"></div>
+                  <div>
+                    <div className="course-date-time">
+                      <span className="course-date">{course.date}</span>
+                      <span className="course-time">{course.time}</span>
+                    </div>
+                    <div className="course-type-container">
+                      <span className="course-type">{course.type}</span>
+                      {course.type === "Corso Base" ? 
+                        <span className="course-badge course-badge-base">Base</span> :
+                        <span className="course-badge course-badge-advanced">Avanzato</span>
+                      }
+                    </div>
+                  </div>
+                </div>
+                <ChevronRight 
+                  className={`chevron-icon ${expandedCourse === course.id ? 'chevron-expanded' : ''}`} 
+                  size={18} 
+                />
               </div>
-              <div className="text-xs">
-                <div className={`font-semibold ${course.type === 'Corso Base' ? 'text-blue-700' : 'text-blue-700'}`}>
-                  {course.type}
-                  <button
-                    onClick={() => toggleTooltip(index)}
-                    className="info-button"
-                    aria-label="Mostra informazioni"
+              
+              {expandedCourse === course.id && (
+                <div className="course-details">
+                  <div className="detail-row">
+                    <span className="detail-label">Istruttore:</span>
+                    <span>{course.instructor}</span>
+                  </div>
+                  <div className="detail-row">
+                    <MapPin size={16} className="detail-icon" />
+                    <span className="detail-label">Luogo:</span>
+                    <span>{course.location}</span>
+                  </div>
+                  <div className="detail-row">
+                    <Users size={16} className="detail-icon" />
+                    <span className="detail-label">Persone:</span>
+                    <span>{course.people}</span>
+                  </div>
+                  <div className="detail-row">
+                    <Clock size={16} className="detail-icon" /> 
+                    <span className="detail-label">Orario:</span>
+                    <span>{course.time}</span>
+                  </div>
+                  <div className="detail-row info-row">
+                    <span className="detail-label">Info:</span>
+                    <span className="course-info-text">{course.info}</span>
+                  </div>
+                  <button 
+                    onClick={handleEventAction}
+                    className="details-button"
                   >
-                    <Info size={14} />
+                    Dettagli
                   </button>
                 </div>
-                <div className="text-gray-600">
-                  Istruttore: {course.instructor}
-                </div>
-                <div className="text-gray-600">
-                  Luogo: {course.address}
-                </div>
-                <div className="text-gray-600">
-                  Persone: {course.Person}
-                </div>
-
-                  
-                  {activeTooltip === index && (
-                    <div className="tooltip">
-                      <div className="tooltip-text">{course.info}</div>
-                      <div className="tooltip-arrow"></div>
-                    </div>
-                  )}
-
-
-<button 
-                  onClick={() => handleEventAction(index)}
-                  className="action-button"
-                >
-                  Dettagli
-                
-                </button>
-              </div>
-             
-               
-            
-                
+              )}
             </div>
-            
           ))}
         </div>
       </div>
-
-      {/* Navigazione paginazione */}
-      <div className="flex justify-between items-center p-3 bg-gray-100 border-t">
+      
+      <div className="calendar-footer">
         <button 
-          onClick={handlePrevPage} 
+          onClick={handlePrevPage}
+          className="pagination-button"
           disabled={currentPage === 1}
-          className="p-2 rounded hover:bg-gray-200 disabled:opacity-50"
         >
-          <ChevronLeft />
+          <ChevronLeft size={16} className="pagination-icon" />
+          Precedente
         </button>
-        
-        <span className="text-sm text-gray-600">
-          Pagina {currentPage} di {totalPages}
-        </span>
-        
+        <span className="pagination-info">Pagina {currentPage} di {totalPages}</span>
         <button 
-          onClick={handleNextPage} 
+          onClick={handleNextPage}
+          className="pagination-button"
           disabled={currentPage === totalPages}
-          className="p-2 rounded hover:bg-gray-200 disabled:opacity-50"
         >
-          <ChevronRight />
+          Successiva
+          <ChevronRight size={16} className="pagination-icon" />
         </button>
       </div>
     </div>
