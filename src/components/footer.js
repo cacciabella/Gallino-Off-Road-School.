@@ -3,12 +3,12 @@ import '../components/footer.css';
 import logoSito from '../img/logo_sito.png';
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-export default function footer(){
+const footer=React.forwardRef((props, ref) =>{
     return(
        
         
      
-            <footer className="site-footer">
+            <footer className="site-footer" id="contatti">
               <div className="footer-container">
                 <div className="footer-logo">
                   <img src={logoSito} alt="GALIO Logo" className="footer-logo-img" />
@@ -58,4 +58,6 @@ export default function footer(){
 
 
     )
-;}
+;});
+
+export default footer;

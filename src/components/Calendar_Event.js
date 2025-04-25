@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import React,{ useState } from 'react';
 import { Calendar, ChevronRight, ChevronLeft, Info, MapPin, Users, Clock } from 'lucide-react';
 import '../components/Calendar.css';
 
-export default function CalendarioCorsi() {
+const  CalendarioCorsi=React.forwardRef((props, ref) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [expandedCourse, setExpandedCourse] = useState(null);
   const [showInfo, setShowInfo] = useState(false);
@@ -145,7 +145,7 @@ export default function CalendarioCorsi() {
   };
 
   return (
-    <div className="calendar-container">
+    <div className="calendar-container" id="calendarEvent" ref={ref}>
       <div className="calendar-header">
         <div className="header-title">
           <Calendar className="calendar-icon" size={20} />
@@ -256,4 +256,6 @@ export default function CalendarioCorsi() {
       </div>
     </div>
   );
-}
+});
+
+export default  CalendarioCorsi;

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef,useEffect } from 'react';
 import Header from './components/header';
 import AboutUs from './components/AboutUs';
 import CalendarEvent from './components/Calendar_Event';
@@ -10,7 +10,19 @@ function App() {
   const homeRef = useRef(null);
   const aboutUsRef = useRef(null);
   const calendarRef = useRef(null);
+
   
+  useEffect(() => {
+    // Scrolla sempre alla sezione con id "home"
+    const timeout = setTimeout(() => {
+      const homeSection = document.getElementById('home');
+      if (homeSection) {
+        homeSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100); // leggero delay per assicurarsi che il DOM sia pronto
+
+    return () => clearTimeout(timeout);
+  }, []);
   // Create a scroll function that can handle any component
   const scrollToSection = (sectionRef) => {
     if (sectionRef.current) {
@@ -27,8 +39,7 @@ function App() {
   return (
     <div className="App">
       <Header scrollToComponent={scrollToComponent}
-      scrollToHome={() => scrollToSection(homeRef)}
-      scrollToAboutUs={() => scrollToSection(aboutUsRef)}
+     
       scrollToCalendar={() => scrollToSection(calendarRef)} />
       <AboutUs ref={myRef} />
       <CalendarEvent />

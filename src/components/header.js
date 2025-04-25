@@ -4,15 +4,15 @@ import fotoHeader from '../img/foto_header.jpg';
 import logoSito from '../img/logo_sito.png';
 import { Link } from 'react-scroll';
 
-function Hero({ scrollToComponent }) {
+const Hero = React.forwardRef(({ scrollToComponent }, ref) => {
   const [showNav, setShowNav] = useState(false);
   
   const menuItems = [
-    { name: 'Home', path: 'AboutUs' },
-    { name: 'Chi Sono', path: '/corsi' },
-    { name: 'Chi Siamo', path: '/AboutUs' },
-    { name: 'Contatti', path: '/contatti' },
-    { name: 'Eventi', path: '/Calendar_Event' }
+    { name: 'Home', path: 'home' },
+    { name: 'Chi Sono', path: 'AboutMe' },
+    { name: 'Chi Siamo', path: 'AboutUs' },
+    { name: 'Contatti', path: 'contatti' },
+    { name: 'Eventi', path: 'calendarEvent'}
   ];
   
   return (
@@ -46,7 +46,7 @@ function Hero({ scrollToComponent }) {
         </div>
       </div>
 
-      <div className="hero-mask">
+      <div className="hero-mask" id="home">
         <div className="hero-content">
           <h1>CORSI MAXIENDURO</h1>
           <button className="hero-btn" onClick={scrollToComponent}>
@@ -56,6 +56,6 @@ function Hero({ scrollToComponent }) {
       </div>
     </div>
   );
-}
+});
 
 export default Hero;

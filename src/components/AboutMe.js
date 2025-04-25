@@ -31,7 +31,7 @@ const AboutMe = React.forwardRef((props, ref) => {
 
 
   return (
-    <div className="AboutUs"  id="AboutUs" ref={ref}>
+    <div className="AboutUs"  id="AboutMe" ref={ref}>
       <img src={ImageAboutUs} className="img-thumbnail" alt="Gruppo di motociclisti della Gallino Off-Road School" onClick={openModal} />
       <div className="text_AboutUs">
         <h4>Ritorna la Gallino Off-Road School di Giuseppe Gallino!</h4>
