@@ -8,11 +8,11 @@ const Hero = React.forwardRef(({ scrollToComponent }, ref) => {
   const [showNav, setShowNav] = useState(false);
   
   const menuItems = [
-    { name: 'Home', path: '#home' },
-    { name: 'Chi Siamo', path: '#AboutUs' },
-    { name: 'Chi Sono', path: '#AboutMe' },
-    { name: 'Eventi', path: '#calendarEvent'},
-    { name: 'Contatti', path: '#contatti' }
+    { name: 'Home', path: 'home' },
+    { name: 'Chi Siamo', path: 'AboutUs' },
+    { name: 'Chi Sono', path: 'AboutMe' },
+    { name: 'Eventi', path: 'calendarEvent'},
+    { name: 'Contatti', path: 'contatti' }
    
   ];
   
