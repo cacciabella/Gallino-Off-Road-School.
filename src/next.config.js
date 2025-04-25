@@ -1,3 +1,3 @@
 module.exports = {
-  distDir: 'build', // Imposta la cartella di output come 'build'
+  distDir: 'next', // Imposta la cartella di output come 'build'
 }
