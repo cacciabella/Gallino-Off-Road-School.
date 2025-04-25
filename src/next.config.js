@@ -1,4 +1,3 @@
 module.exports = {
-    reactStrictMode: true,
-  }
-  
+  distDir: 'build', // Imposta la cartella di output come 'build'
+}
