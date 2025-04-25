@@ -37,10 +37,10 @@ const Hero = React.forwardRef(({ scrollToComponent }, ref) => {
           <ul className="navbar-nav">
             {menuItems.map((item, index) => (
               <li key={index} className="navbar-item">
-                <a href={item.path} className="navbar-link" onClick={() => setShowNav(false)}
-                   duration={500}>
+                <Link to={item.path} className="navbar-link" onClick={() => setShowNav(false)}
+                smooth={true}    duration={500}>
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
