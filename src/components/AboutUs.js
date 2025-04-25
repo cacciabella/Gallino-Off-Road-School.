@@ -1,6 +1,5 @@
 import React,{useState} from "react";
-import '../components/AboutUs.css';
-import ImageAboutUs from '../img/photo_presentazione.jpg';
+
 const ModalImage = ({ imageUrl, onClose }) => {
   if (!imageUrl) return null;
 
@@ -32,7 +31,7 @@ const AboutUs = React.forwardRef((props, ref) => {
 
   return (
     <div className="AboutUs"  id="AboutUs" ref={ref}>
-      <img src={ImageAboutUs} className="img-thumbnail" alt="Gruppo di motociclisti della Gallino Off-Road School" onClick={openModal} />
+      <img src="/img/photo_presentazione.jpg" className="img-thumbnail" alt="Gruppo di motociclisti della Gallino Off-Road School" onClick={openModal} />
       <div className="text_AboutUs">
         <h4>Ritorna la Gallino Off-Road School di Giuseppe Gallino!</h4>
         <p>Dopo anni di collaborazioni con gruppi sportivi, in cui Giuseppe Gallino ha condiviso la sua esperienza per formare nuovi enduristi, nasce finalmente la <strong>Gallino Off-Road School</strong>.</p>
@@ -48,7 +47,7 @@ const AboutUs = React.forwardRef((props, ref) => {
           <div className="modal-content">
             <span className="close" onClick={closeModal}>&times;</span> {/* Pulsante di chiusura */}
             <img
-              src={ImageAboutUs}
+              src="/img/photo_presentazione.jpg"
               className="modal-image"
               alt="Immagine ingrandita"
             />

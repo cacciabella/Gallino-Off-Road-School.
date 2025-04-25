@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './header.css';
-import fotoHeader from '../img/foto_header.jpg';
-import logoSito from '../img/logo_sito.png';
+
+
+
 import { Link } from 'react-scroll';
 
 const Hero = React.forwardRef(({ scrollToComponent }, ref) => {
@@ -9,18 +9,19 @@ const Hero = React.forwardRef(({ scrollToComponent }, ref) => {
   
   const menuItems = [
     { name: 'Home', path: 'home' },
-    { name: 'Chi Sono', path: 'AboutMe' },
     { name: 'Chi Siamo', path: 'AboutUs' },
-    { name: 'Contatti', path: 'contatti' },
-    { name: 'Eventi', path: 'calendarEvent'}
+    { name: 'Chi Sono', path: 'AboutMe' },
+    { name: 'Eventi', path: 'calendarEvent'},
+    { name: 'Contatti', path: 'contatti' }
+   
   ];
   
   return (
-    <div className="hero" style={{ backgroundImage: `url(${fotoHeader})` }}>
+    <div className="hero" style={{ backgroundImage: `url(/img/foto_header.jpg)`}}>
       <div className="navbar-container">
         <nav className="navbar">
           <div className="navbar-top">
-            <img src={logoSito} style={{ width: '150px', height: 'auto' }} alt="Logo" />
+            <img src="/img/logo_sito.png" style={{ width: '150px', height: 'auto' }} alt="Logo" />
             
             <button
               className="navbar-toggler"

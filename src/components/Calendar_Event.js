@@ -1,6 +1,6 @@
 import React,{ useState } from 'react';
 import { Calendar, ChevronRight, ChevronLeft, Info, MapPin, Users, Clock } from 'lucide-react';
-import '../components/Calendar.css';
+
 
 const  CalendarioCorsi=React.forwardRef((props, ref) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -11,7 +11,7 @@ const  CalendarioCorsi=React.forwardRef((props, ref) => {
   const courses = [
     {
       id: 1,
-      date: "17 Maggio '24",
+      date: "17 Maggio '25",
       time: "09:00 - 18:00",
       type: "Corso Base",
       instructor: "Giuseppe Gallino",
@@ -21,7 +21,7 @@ const  CalendarioCorsi=React.forwardRef((props, ref) => {
     },
     {
       id: 2,
-      date: "18 Maggio '24",
+      date: "18 Maggio '25",
       time: "09:00 - 18:00",
       type: "Corso Avanzato",
       instructor: "Giuseppe Gallino",
@@ -31,7 +31,7 @@ const  CalendarioCorsi=React.forwardRef((props, ref) => {
     },
     {
       id: 3,
-      date: "24 Maggio '24",
+      date: "24 Maggio '25",
       time: "09:00 - 18:00",
       type: "Corso Base",
       instructor: "Giuseppe Gallino",
@@ -41,7 +41,7 @@ const  CalendarioCorsi=React.forwardRef((props, ref) => {
     },
     {
       id: 4,
-      date: "25 Maggio '24",
+      date: "25 Maggio '25",
       time: "09:00 - 18:00",
       type: "Corso Avanzato",
       instructor: "Giuseppe Gallino",
@@ -51,7 +51,7 @@ const  CalendarioCorsi=React.forwardRef((props, ref) => {
     },
     {
       id: 5,
-      date: "14 Giugno '24",
+      date: "14 Giugno '25",
       time: "09:00 - 18:00",
       type: "Corso Base",
       instructor: "Giuseppe Gallino",
@@ -61,7 +61,7 @@ const  CalendarioCorsi=React.forwardRef((props, ref) => {
     },
     {
       id: 6,
-      date: "15 Giugno '24",
+      date: "15 Giugno '25",
       time: "09:00 - 18:00",
       type: "Corso Avanzato",
       instructor: "Giuseppe Gallino",
@@ -71,7 +71,7 @@ const  CalendarioCorsi=React.forwardRef((props, ref) => {
     },
     {
       id: 7,
-      date: "12 Luglio '24",
+      date: "12 Luglio '25",
       time: "09:00 - 18:00",
       type: "Corso Base",
       instructor: "Giuseppe Gallino",
@@ -81,7 +81,7 @@ const  CalendarioCorsi=React.forwardRef((props, ref) => {
     },
     {
       id: 8,
-      date: "13 Luglio '24",
+      date: "13 Luglio '25",
       time: "09:00 - 18:00",
       type: "Corso Avanzato",
       instructor: "Giuseppe Gallino",
@@ -91,7 +91,7 @@ const  CalendarioCorsi=React.forwardRef((props, ref) => {
     },
     {
       id: 9,
-      date: "19 Luglio '24",
+      date: "19 Luglio '25",
       time: "09:00 - 18:00",
       type: "Corso Base",
       instructor: "Giuseppe Gallino",
@@ -101,7 +101,7 @@ const  CalendarioCorsi=React.forwardRef((props, ref) => {
     },
     {
       id: 10,
-      date: "20 Luglio '24",
+      date: "20 Luglio '25",
       time: "09:00 - 18:00",
       type: "Corso Avanzato",
       instructor: "Giuseppe Gallino",

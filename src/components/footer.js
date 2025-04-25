@@ -1,6 +1,6 @@
 import React from "react";
-import '../components/footer.css';
-import logoSito from '../img/logo_sito.png';
+
+
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 const footer=React.forwardRef((props, ref) =>{
@@ -11,7 +11,7 @@ const footer=React.forwardRef((props, ref) =>{
             <footer className="site-footer" id="contatti">
               <div className="footer-container">
                 <div className="footer-logo">
-                  <img src={logoSito} alt="GALIO Logo" className="footer-logo-img" />
+                  <img src="/img/logo_sito.png" alt="GALIO Logo" className="footer-logo-img" />
                 </div>
                 
                 <div className="footer-content">
