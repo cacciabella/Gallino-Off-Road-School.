@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-
-
-
+import Image from 'next/image';
 import { Link } from 'react-scroll';
 
 const Hero = React.forwardRef(({ scrollToComponent }, ref) => {
@@ -13,7 +11,6 @@ const Hero = React.forwardRef(({ scrollToComponent }, ref) => {
     { name: 'Chi Sono', path: 'AboutMe' },
     { name: 'Eventi', path: 'calendarEvent'},
     { name: 'Contatti', path: 'contatti' }
-   
   ];
   
   return (
@@ -21,7 +18,13 @@ const Hero = React.forwardRef(({ scrollToComponent }, ref) => {
       <div className="navbar-container">
         <nav className="navbar">
           <div className="navbar-top">
-            <img src="/img/logo_sito.png" style={{ width: '150px', height: 'auto' }} alt="Logo" />
+            <Image 
+              src="/img/logo_sito.png" 
+              width={150}
+              height={50}
+              style={{ height: 'auto' }}
+              alt="Logo" 
+            />
             
             <button
               className="navbar-toggler"
@@ -37,8 +40,13 @@ const Hero = React.forwardRef(({ scrollToComponent }, ref) => {
           <ul className="navbar-nav">
             {menuItems.map((item, index) => (
               <li key={index} className="navbar-item">
-                <Link to={item.path} className="navbar-link" onClick={() => setShowNav(false)}
-                smooth={true}    duration={500}>
+                <Link 
+                  to={item.path} 
+                  className="navbar-link" 
+                  onClick={() => setShowNav(false)}
+                  smooth={true}
+                  duration={500}
+                >
                   {item.name}
                 </Link>
               </li>
@@ -58,5 +66,8 @@ const Hero = React.forwardRef(({ scrollToComponent }, ref) => {
     </div>
   );
 });
+
+// Add display name
+Hero.displayName = 'Hero';
 
 export default Hero;

@@ -1,8 +1,7 @@
-import React,{ useState } from 'react';
+import React, { useState } from 'react';
 import { Calendar, ChevronRight, ChevronLeft, Info, MapPin, Users, Clock } from 'lucide-react';
 
-
-const  CalendarioCorsi=React.forwardRef((props, ref) => {
+const CalendarioCorsi = React.forwardRef((props, ref) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [expandedCourse, setExpandedCourse] = useState(null);
   const [showInfo, setShowInfo] = useState(false);
@@ -162,7 +161,7 @@ const  CalendarioCorsi=React.forwardRef((props, ref) => {
         <div className="info-banner">
           <h3>Importante</h3>
           <p>
-            È richiesta la tessera AICS MOTOALLENA FUORISTADA che può essere richiesta anche al momento dell'iscrizione
+            È richiesta la tessera AICS MOTOALLENA FUORISTADA che può essere richiesta anche al momento dell&apos;iscrizione
           </p>
         </div>
       )}
@@ -258,4 +257,7 @@ const  CalendarioCorsi=React.forwardRef((props, ref) => {
   );
 });
 
-export default  CalendarioCorsi;
+// Add display name
+CalendarioCorsi.displayName = 'CalendarioCorsi';
+
+export default CalendarioCorsi;
